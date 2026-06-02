@@ -1,5 +1,12 @@
 # 🏗️ RAG ARCHITECTURE SELECTION GUIDE (Master Class)
 
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://python.org)
+[![RAG](https://img.shields.io/badge/RAG-Classical_%26_Agentic-6E56CF)](#)
+[![LLM](https://img.shields.io/badge/LLM-OpenAI%20|%20Gemini%20|%20Claude%20|%20Ollama%20|%20vLLM-412991?logo=openai&logoColor=white)](#)
+[![ChromaDB](https://img.shields.io/badge/Vector_DB-ChromaDB-FF6F61)](https://www.trychroma.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+
 ```mermaid
 graph TD
     A[🏗️ RAG Project] --> B{Document Types?}
