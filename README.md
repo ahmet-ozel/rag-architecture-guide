@@ -1,4 +1,4 @@
-# RAG Architecture Selection Guide
+﻿# RAG Architecture Selection Guide
 
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://python.org)
 [![RAG](https://img.shields.io/badge/RAG-Classical_%26_Agentic-6E56CF)](#)
@@ -24,32 +24,32 @@ A Turkish version of this guide is available in [README_tr.md](README_tr.md).
 
 ## Decision Questions
 
-**1. Infrastructure and privacy — where will the system run?**
+**1. Infrastructure and privacy - where will the system run?**
 - A: Cloud. Data can be sent to external APIs.
 - B: Local. Data cannot leave the company; privacy is mandatory.
   - 1.1 (if B): Do you have GPU capacity on your server? A: Yes / B: No, CPU only / C: Other (describe your hardware).
 
-**2. Data flow — how will the system operate?**
+**2. Data flow - how will the system operate?**
 - A: Static / corporate archive. Documents are uploaded once and rarely change.
 - B: Dynamic / document assistant. Users continuously upload and delete documents in real time.
 
-**3. Document type — what reading engine is needed?**
+**3. Document type - what reading engine is needed?**
 - A: Digital text only (PDFs with selectable text, Word, TXT, Excel). OCR not required.
 - B: Scanned or complex documents (signed/stamped pages, photos, complex tables). OCR or Vision LLM required.
 
 **4. Document language?**
 - A: Turkish only / B: English only / C: Multilingual / D: Other (specify).
 
-**5. Output format — what should the system return?**
+**5. Output format - what should the system return?**
 - A: Free text (chat, summarization, assistant tone).
 - B: Structured data (strict JSON or tables for another system).
 - C: Custom template (describe it, e.g. return only invoice number and date).
 
-**6. Content structure — how is the document organized?** (critical)
-- A: Q&A / Excel — pairs are side by side, must not be split.
-- B: HTML / web page — contains ads and menus, must be cleaned.
-- C: Legal text / contract — split by clause numbers.
-- D: Mixed / multi-format — Word, scanned invoices, Excel, images coexist.
+**6. Content structure - how is the document organized?** (critical)
+- A: Q&A / Excel - pairs are side by side, must not be split.
+- B: HTML / web page - contains ads and menus, must be cleaned.
+- C: Legal text / contract - split by clause numbers.
+- D: Mixed / multi-format - Word, scanned invoices, Excel, images coexist.
 
 **7. External system connections needed?**
 - A: No, RAG runs only over the uploaded archive.
