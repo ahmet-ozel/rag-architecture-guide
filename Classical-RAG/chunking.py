@@ -1,4 +1,4 @@
-"""
+﻿"""
 Document Chunking and Embedding Application with Enhanced CSV/Excel Support
 Sentence-aware chunking that never breaks words mid-token.
 """
@@ -92,7 +92,7 @@ def find_sentence_boundaries(text: str) -> List[int]:
     boundaries: List[int] = []
     text_len = len(text)
 
-    # Common abbreviations (multilingual) – period after these is NOT a sentence end
+    # Common abbreviations (multilingual) - period after these is NOT a sentence end
     abbreviations = {
         # Academic / titles
         "dr", "prof", "doc", "sr", "jr", "mr", "mrs", "ms", "phd", "md",
@@ -638,7 +638,7 @@ class DocumentProcessor:
         attach_row_data: bool,
         flatten_row_values_to_root: bool,
     ) -> List[Dict[str, Any]]:
-        """Process CSV / XLSX / XLS – each row becomes its own chunk."""
+        """Process CSV / XLSX / XLS - each row becomes its own chunk."""
         chunks: List[Dict[str, Any]] = []
         fname = getattr(file, "name", "unknown")
 
@@ -699,7 +699,7 @@ class DocumentProcessor:
                         rows_done += 1
                         part_idx += 1
                     else:
-                        # Row too long – split into sub-chunks
+                        # Row too long - split into sub-chunks
                         rd = self._row_dict(row) if attach_row_data else {}
                         sub_texts = self._split_long_text(text)
                         rows_done += 1
@@ -738,7 +738,7 @@ class DocumentProcessor:
                 st.success(f"✅ {fname} → {len(chunks)} row-level chunks (structured table)")
 
             else:
-                # Unstructured table – flatten to prose and chunk normally
+                # Unstructured table - flatten to prose and chunk normally
                 flat = dataframe_to_text(df)
                 if flat.strip():
                     for i, ct in enumerate(
@@ -954,7 +954,7 @@ def main():
         to_upper = st.checkbox("🔠 Convert to UPPERCASE", False)
     with n3:
         if to_lower and to_upper:
-            st.warning("⚠️ Both selected – UPPERCASE takes priority.")
+            st.warning("⚠️ Both selected - UPPERCASE takes priority.")
         else:
             st.success("✅ Ready")
 

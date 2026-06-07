@@ -1,4 +1,4 @@
-"""
+﻿"""
 Agentic RAG Tool Definitions
 =============================
 OpenAI function calling için araç tanımları.
@@ -96,7 +96,7 @@ class VectorSearchTool:
             self._store_type = "chroma"
             self._init_chroma(collection_name, chroma_persist_dir)
 
-        logger.info("VectorSearchTool hazır – store=%s, collection=%s", self._store_type, collection_name)
+        logger.info("VectorSearchTool hazır - store=%s, collection=%s", self._store_type, collection_name)
 
     def _init_chroma(self, collection_name, persist_dir):
         persist_dir = persist_dir or os.getenv("CHROMA_PERSIST_DIR", "./chroma_db")

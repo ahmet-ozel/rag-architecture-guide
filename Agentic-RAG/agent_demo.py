@@ -1,4 +1,4 @@
-"""
+﻿"""
 Agentic RAG Demo
 =================
 Çoklu LLM provider desteği ile otonom araç seçimi yapan RAG demo.
@@ -137,7 +137,7 @@ class _GeminiFunctionCaller:
         ]
 
     def chat(self, messages, tools=None):
-        """Gemini chat with function calling — returns a wrapper."""
+        """Gemini chat with function calling - returns a wrapper."""
         contents = []
         for m in messages:
             role = m["role"]
@@ -360,7 +360,7 @@ class AgenticRAGDemo:
 
         # OpenAI-format tool definitions (used by openai/vllm/ollama)
         self._tools = [VectorSearchTool.TOOL_DEFINITION, WebSearchTool.TOOL_DEFINITION]
-        logger.info("AgenticRAGDemo hazır – provider=%s, model=%s", provider, self._caller.model)
+        logger.info("AgenticRAGDemo hazır - provider=%s, model=%s", provider, self._caller.model)
 
     def ingest(self, data_dir: str) -> int:
         return self._vector_tool.ingest_directory(data_dir)

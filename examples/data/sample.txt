@@ -1,5 +1,5 @@
 ================================================================================
-  RAG (Retrieval-Augmented Generation) – Kapsamlı Teknik Doküman
+  RAG (Retrieval-Augmented Generation) - Kapsamlı Teknik Doküman
   Comprehensive Technical Document on RAG Architecture
 ================================================================================
 

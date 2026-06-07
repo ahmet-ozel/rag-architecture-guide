@@ -1,4 +1,4 @@
-"""
+﻿"""
 RAG Evaluation Script
 =====================
 RAG pipeline kalitesini Faithfulness, Answer Relevancy ve Context Precision
@@ -30,7 +30,7 @@ import numpy as np
 from dotenv import load_dotenv
 
 # ---------------------------------------------------------------------------
-# Path setup – allow importing from Classical-RAG
+# Path setup - allow importing from Classical-RAG
 # ---------------------------------------------------------------------------
 
 _EVAL_DIR = Path(__file__).resolve().parent
@@ -102,7 +102,7 @@ def _compute_faithfulness(
     Returns:
         Float between 0 and 1 (supported_claims / total_claims).
     """
-    # Step 1 – extract claims
+    # Step 1 - extract claims
     extract_prompt = (
         "Extract all factual claims from the following answer. "
         "Return ONLY a JSON array of strings, one claim per element. "
@@ -126,7 +126,7 @@ def _compute_faithfulness(
         logger.warning("Could not parse claims from LLM response; defaulting to 1.0")
         return 1.0
 
-    # Step 2 – verify each claim
+    # Step 2 - verify each claim
     supported = 0
     for claim in claims:
         verify_prompt = (
