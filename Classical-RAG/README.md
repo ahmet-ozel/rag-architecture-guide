@@ -1,6 +1,6 @@
-# CLASSIC RAG ARCHITECTURE (End-to-End Pipeline)
+﻿# CLASSIC RAG ARCHITECTURE (End-to-End Pipeline)
 
-Classic RAG is a deterministic (rule-based) system where there is no thinking agent — everything is pre-coded by the architect to run like clockwork. It consists of two main pipelines: **Part 1 (Data Preparation)** and **Part 2 (User Query)**.
+Classic RAG is a deterministic (rule-based) system where there is no thinking agent  -  everything is pre-coded by the architect to run like clockwork. It consists of two main pipelines: **Part 1 (Data Preparation)** and **Part 2 (User Query)**.
 
 ---
 
@@ -28,7 +28,7 @@ graph LR
 Read with the Python Pandas library. Empty (NaN/Null) rows are dropped. Date and number formats are converted to machine-readable standard formats.
 
 #### B. HTML / Web Pages
-BeautifulSoup library is used. Menus (`<nav>`), footers (`<footer>`), ads, and JavaScript code that would poison the RAG are completely removed. Only pure text bodies are extracted. Alternatively, tools like Trafilatura or MarkdownifyHTML can be used — these convert web pages directly into clean Markdown.
+BeautifulSoup library is used. Menus (`<nav>`), footers (`<footer>`), ads, and JavaScript code that would poison the RAG are completely removed. Only pure text bodies are extracted. Alternatively, tools like Trafilatura or MarkdownifyHTML can be used  -  these convert web pages directly into clean Markdown.
 
 #### C. Scanned Images / PDFs (OCR & VLM Usage)
 Read with traditional OCR engines or Next-Generation Vision AI (Vision LLM) models. PDF pages are converted to images and sent to these engines:
@@ -56,13 +56,13 @@ Unnecessary tab spaces (`strip()`), broken Unicode characters (e.g., `\u00A0`), 
 **How Is It Done? (Blades by Content Type):**
 
 #### A. Row-Based Chunking
-Used only for Excel and Q&A. For example: the structure "Q: What's the VAT rate? A: 20%" is never split down the middle — it becomes a single chunk.
+Used only for Excel and Q&A. For example: the structure "Q: What's the VAT rate? A: 20%" is never split down the middle  -  it becomes a single chunk.
 
 #### B. Header-Based Chunking
 Used for HTML and Word documents. Text isn't stupidly cut at a fixed character count; paragraphs under H2 or H3 headings are cut as a whole unit. LangChain's `MarkdownHeaderTextSplitter` or LlamaIndex's `MarkdownNodeParser` automate this job.
 
 #### C. Layout-Aware Chunking
-Used for documents coming from OCR/VLM. An invoice table is never split down the middle — the entire table becomes 1 chunk. Docling and Unstructured.io handle this distinction naturally.
+Used for documents coming from OCR/VLM. An invoice table is never split down the middle  -  the entire table becomes 1 chunk. Docling and Unstructured.io handle this distinction naturally.
 
 #### D. Recursive Character
 Used for plain text. Splits text into 500-1000 character pieces while preserving sentence integrity.
@@ -79,7 +79,7 @@ Chunks are kept small to increase search precision, but the context given to the
 
 **Purpose:** Convert text chunks into machine language (coordinates/numbers with direction and magnitude).
 
-**Why Is It Necessary?:** Databases don't understand the meaning of words — they understand distances between numbers.
+**Why Is It Necessary?:** Databases don't understand the meaning of words  -  they understand distances between numbers.
 
 **Options (By Language and Chunk Size):**
 
@@ -105,7 +105,7 @@ Chunks are kept small to increase search precision, but the context given to the
 
 **Purpose:** Persistently store vectors and attach identity cards (Metadata) to them.
 
-**Why Is It Necessary?:** When a user says "documents from 2024," the system doesn't scan the entire database — it only searches vectors tagged with `date: 2024`. (This is called Pre-filtering, and it increases speed by 10x).
+**Why Is It Necessary?:** When a user says "documents from 2024," the system doesn't scan the entire database  -  it only searches vectors tagged with `date: 2024`. (This is called Pre-filtering, and it increases speed by 10x).
 
 **Options:**
 
@@ -115,7 +115,7 @@ Chunks are kept small to increase search precision, but the context given to the
 
 - **🖥️ Local (Static/Small):**
   - **ChromaDB:** Python-native, works instantly like a folder. Ideal for prototyping and small projects.
-  - **FAISS (Meta):** The fastest brute-force and IVF search library. No metadata filtering — pure speed.
+  - **FAISS (Meta):** The fastest brute-force and IVF search library. No metadata filtering  -  pure speed.
   - **LanceDB:** Serverless, disk-based vector database. Works with zero configuration, consumes very low memory thanks to the Lance format.
 
 - **☁️ Cloud:**
@@ -221,7 +221,7 @@ graph LR
 
 **How Does It Work?:**
 
-- **Safety Threshold:** If the Cosine similarity score from Step 7 comes back very low (e.g., below 0.30), the system doesn't give the document to the LLM at all — it directly says "No information found in documents." This threshold should be calibrated experimentally based on the embedding model and dataset.
+- **Safety Threshold:** If the Cosine similarity score from Step 7 comes back very low (e.g., below 0.30), the system doesn't give the document to the LLM at all  -  it directly says "No information found in documents." This threshold should be calibrated experimentally based on the embedding model and dataset.
 
 - **Restrictive Prompt (Guardrail):** "You are an assistant. Use ONLY the context below. If the answer is not in the context, say 'I don't know.' Context: [1, 2, 3]. Question: [Leave policies]."
 
@@ -314,7 +314,7 @@ Key metrics you must continuously measure before and after pushing your RAG pipe
 
 **Note:** This demo does not implement the OCR step. For scanned documents, you can integrate:
 
-- **PaddleOCR (Local):** `pip install paddleocr` — Supports 80+ languages including Turkish. PP-Structure module handles table extraction. Requires local installation and ~2GB disk space.
+- **PaddleOCR (Local):** `pip install paddleocr`  -  Supports 80+ languages including Turkish. PP-Structure module handles table extraction. Requires local installation and ~2GB disk space.
 - **Tesseract (Local):** `pip install pytesseract` + system Tesseract installation. Lightweight but less accurate on complex layouts.
 - **Cloud Vision APIs:** Google Gemini Vision, Claude Vision, or GPT-4 Vision. Send document images via API for high-accuracy extraction. No local setup required but incurs API costs.
 

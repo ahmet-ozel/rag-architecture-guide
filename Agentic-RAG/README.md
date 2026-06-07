@@ -1,4 +1,4 @@
-# 🎓 ULTIMATE AGENTIC DOCUMENT RAG ARCHITECTURE (End-to-End)
+﻿# 🎓 ULTIMATE AGENTIC DOCUMENT RAG ARCHITECTURE (End-to-End)
 
 ```mermaid
 graph TD
@@ -18,7 +18,7 @@ graph TD
 
 A modern Agentic RAG system is not magical code floating in the air. It works like a perfectly functioning company and consists of **3 Main Actors:**
 
-1. **Orchestrator:** The company's building — the physical body that directs traffic and carries the load.
+1. **Orchestrator:** The company's building  -  the physical body that directs traffic and carries the load.
 2. **LLM:** The CEO who only thinks, plans, and gives orders (The Brain).
 3. **MCP Servers (Tools):** The Subcontractors who execute the actual work (Reading, Saving) in their area of expertise when they receive orders from the CEO (The Hands).
 
@@ -28,7 +28,7 @@ A modern Agentic RAG system is not magical code floating in the air. It works li
 
 ### ⚙️ STEP 1: Orchestrator (Main Code / Traffic Controller)
 
-**Role:** This is your 24/7 running main server. It receives the message from the user, takes it to the LLM, catches the "Run this tool" JSON commands that the LLM issues, and physically executes those MCPs — it's the muscle that carries the heavy data behind the scenes.
+**Role:** This is your 24/7 running main server. It receives the message from the user, takes it to the LLM, catches the "Run this tool" JSON commands that the LLM issues, and physically executes those MCPs  -  it's the muscle that carries the heavy data behind the scenes.
 
 **Architect's Options:**
 
@@ -37,7 +37,7 @@ A modern Agentic RAG system is not magical code floating in the air. It works li
 - **LangGraph (Python/JS):** Industry standard. The most mature and powerful framework for building cyclic agent networks. Manages complex flows with state machine logic, handles even long-running tasks with checkpoint/resume support.
 - **LlamaIndex Workflows:** The most optimized scaffold in the world specifically for Document/RAG processes. If your only concern is document processing and querying, this gives you results with minimal friction.
 - **CrewAI:** Chosen for running multiple agents simultaneously in a role-based fashion (one reads, another summarizes, a third validates). Set up with simple YAML config.
-- **AG2 (formerly AutoGen — Microsoft):** Microsoft's rewritten framework for multi-agent orchestration. Builds inter-agent debate and consensus flows with its group chat architecture.
+- **AG2 (formerly AutoGen  -  Microsoft):** Microsoft's rewritten framework for multi-agent orchestration. Builds inter-agent debate and consensus flows with its group chat architecture.
 - **Pydantic AI:** A type-safe, minimalist agent framework. Builds reliable agents through tool definitions and output validation via Pydantic models. Ideal for small-to-medium scale projects.
 - **Custom FastAPI:** Pure code written with your own `while` loop, without any library. Full control, but you write all the orchestration logic yourself.
 
@@ -171,7 +171,7 @@ A modern Agentic RAG system is not magical code floating in the air. It works li
 
 ---
 
-## 🚀 PART 2: THE SYSTEM'S DYNAMIC OPERATION (Agent Loop — Agentic Loop)
+## 🚀 PART 2: THE SYSTEM'S DYNAMIC OPERATION (Agent Loop  -  Agentic Loop)
 
 All components have been defined as a list inside the Orchestrator (Main code). The user has arrived and the show begins:
 

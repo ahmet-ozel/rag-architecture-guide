@@ -1,4 +1,4 @@
-# KLASİK RAG MİMARİSİ (Uçtan Uca Boru Hattı)
+﻿# KLASİK RAG MİMARİSİ (Uçtan Uca Boru Hattı)
 
 Klasik RAG, düşünen bir ajanın olmadığı, her şeyin mimar tarafından önceden saat gibi işleyecek şekilde kodlandığı deterministik (kesin kurallı) bir sistemdir. İki ana hattan oluşur: **Kısım 1 (Veri Hazırlığı)** ve **Kısım 2 (Kullanıcı Sorgusu)**.
 
@@ -314,7 +314,7 @@ RAG pipeline'ınızı canlıya almadan önce ve aldıktan sonra sürekli ölçme
 
 **Not:** Bu demo'da OCR adımı uygulanmamıştır. Taranmış belgeler için şunları entegre edebilirsiniz:
 
-- **PaddleOCR (Yerel):** `pip install paddleocr` — Türkçe dahil 80+ dil desteği. PP-Structure modülü tablo çıkarımını yönetir. Yerel kurulum ve ~2GB disk alanı gerektirir.
+- **PaddleOCR (Yerel):** `pip install paddleocr`  -  Türkçe dahil 80+ dil desteği. PP-Structure modülü tablo çıkarımını yönetir. Yerel kurulum ve ~2GB disk alanı gerektirir.
 - **Tesseract (Yerel):** `pip install pytesseract` + sistem Tesseract kurulumu. Hafif ama karmaşık düzenlerde daha az doğru.
 - **Bulut Vision API'leri:** Google Gemini Vision, Claude Vision veya GPT-4 Vision. Belge görsellerini API üzerinden göndererek yüksek doğrulukta çıkarım yapın. Yerel kurulum gerektirmez ancak API maliyeti oluşur.
 

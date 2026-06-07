@@ -1,4 +1,4 @@
-# 🏗️ RAG MİMARİSİ SEÇİM REHBERİ (Master Class)
+﻿# 🏗️ RAG MİMARİSİ SEÇİM REHBERİ (Master Class)
 
 ```mermaid
 graph TD
@@ -57,7 +57,7 @@ Aşağıdaki soruları projenizin ihtiyaçlarına göre cevaplayın.
 ### Soru 5: Çıktı Formatı (Yapay Zeka size ne versin?)
 *   **A:** Serbest Metin: Doğal sohbet, özetleme, normal asistan dili.
 *   **B:** Yapılandırılmış Veri: Başka bir sisteme/API'ye beslenecek kesin JSON veya Tablo formatı.
-*   **C:** Özel Şablon İstiyorum / Çıktıda istediğiniz özel şablonu detaylandırın. *(Açık Metin Alanı — Örn: Yalnızca Fatura No ve Tarih dönsün).*
+*   **C:** Özel Şablon İstiyorum / Çıktıda istediğiniz özel şablonu detaylandırın. *(Açık Metin Alanı  -  Örn: Yalnızca Fatura No ve Tarih dönsün).*
 
 ---
 
@@ -74,8 +74,8 @@ Aşağıdaki soruları projenizin ihtiyaçlarına göre cevaplayın.
 *   **B:** Evet, RAG'ın yanı sıra harici sistemlere bağlantı gerekiyor.
 
 > **Alt Soru 7.1** *(Yalnızca Soru 7'de "B" seçildiyse sorulur):*
-> Harici Sistem Bağlantı Detayları — Hangi sistemlere bağlanılacak ve ne yapılacak? Lütfen detay verin.
-> *(Açık Metin Alanı — Örn: Müşteri ID'sine göre PostgreSQL veritabanından veri çekilecek, canlı internet araması yapılacak, CRM'de ticket açılacak).*
+> Harici Sistem Bağlantı Detayları  -  Hangi sistemlere bağlanılacak ve ne yapılacak? Lütfen detay verin.
+> *(Açık Metin Alanı  -  Örn: Müşteri ID'sine göre PostgreSQL veritabanından veri çekilecek, canlı internet araması yapılacak, CRM'de ticket açılacak).*
 
 ---
 
